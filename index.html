@@ -1,0 +1,39 @@
+﻿
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script language="javascript" src="js/ap.js"></script>
+    <script language="javascript" src="js/ap.animal.js"></script>
+    <script language="javascript" src="js/ap.animalBehavior.js"></script>
+    <script language="javascript" src="js/ap.fence.js"></script>
+    <script language="javascript">
+
+    window.addEventListener("load", function () {
+        var app = new ap();
+        app.checkOnline();
+
+        window.addEventListener("resize", function () {
+            app.detectOrientation();
+        });
+        window.addEventListener("orientationchange", function () {
+            app.detectOrientation();
+        });
+    });
+
+    </script>
+    <style type="text/css">
+        .fence {
+            border: 1px solid red;
+        }
+
+        .animal {
+            border: 1px solid green;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+</body>
+</html>
