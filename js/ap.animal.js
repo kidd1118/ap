@@ -11,7 +11,7 @@
                 };
                 this.container = document.createElement("div");
                 this.container.style.position = "absolute";
-                this.container.style.backgroundImage = "url(..//images//" + type + ".png)";
+                this.container.style.backgroundImage = "url(images//" + type + ".png)";
                 this.container.style.width = this._size.width + "px";
                 this.container.style.height = this._size.height + "px";
                 this.container.className = "animal";
