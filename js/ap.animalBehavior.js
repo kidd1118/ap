@@ -87,22 +87,22 @@
                     if (o instanceof ap.animal) {
                         var x, y;
                         o.getDom().style.cursor = "pointer";
-                        o.getDom().addEventListener("mousedown", function () {
-                            x = event.offsetX;
-                            y = event.offsetY;
+                        o.getDom().addEventListener("mousedown", function (e) {
+                            x = e.offsetX;
+                            y = e.offsetY;
                             this.style.zIndex = 99;
                             this.addEventListener("mousemove", _mousemove, true);
 
                         }, false);
-                        o.getDom().addEventListener("mouseup", function () {
+                        o.getDom().addEventListener("mouseup", function (e) {
                             this.style.zIndex = 1;
                             this.removeEventListener("mousemove", _mousemove, true)
 
                         }, false);
 
-                        function _mousemove() {
-                            o.setPosition(Math.abs(this.offsetLeft - x + event.offsetX), Math.abs(this.offsetTop - y + event.offsetY));
-                            //console.log(event.clientX, event.clientY, event.offsetX, event.offsetY);
+                        function _mousemove(e) {
+                            o.setPosition(Math.abs(this.offsetLeft - x + e.offsetX), Math.abs(this.offsetTop - y + e.offsetY));
+                            //console.log(e.clientX, e.clientY, e.offsetX, e.offsetY);
                         };
                     }
                 }
