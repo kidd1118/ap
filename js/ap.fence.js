@@ -115,7 +115,7 @@
                     var set = function (x, y) {
                         animal.setPosition(x, y);
                         this._animalBehavior.draggable(animal);
-                        this._animalBehavior.moving(animal);
+                        //this._animalBehavior.moving(animal);
                         this._animals.push(animal);
                     };
                     counting.call(this);
